@@ -1,0 +1,32 @@
+{
+  "name": "simple-carousel",
+  "version": "0.0.1",
+  "description": "A simple image carousel slider",
+  "private": true,
+  "directories": {
+    "test": "./test",
+	"src": "./src",
+	"dist": "./dist"
+  },
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "dev": "webpack --watch --progress --config ./webpack.config.js",
+	"eslint": "eslint --ignore-path .gitignore --ext .js ./src",
+    "test": "npm run eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boikle/simple-carousel.git"
+  },
+  "author": "Robert Oikle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boikle/simple-carousel/issues"
+  },
+  "homepage": "https://github.com/boikle/simple-carousel#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
