@@ -1,4 +1,8 @@
-# VIM created files #
+# VIM created files
 #######################
 *.swp
 
+# Node files
+#######################
+npm-debug.log
+node_modules
