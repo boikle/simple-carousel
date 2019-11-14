@@ -5,13 +5,13 @@
   "private": true,
   "directories": {
     "test": "./test",
-	"src": "./src",
-	"dist": "./dist"
+    "src": "./src",
+    "dist": "./dist"
   },
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "dev": "webpack --watch --progress --config ./webpack.config.js",
-	"eslint": "eslint --ignore-path .gitignore --ext .js ./src",
+    "eslint": "eslint --ignore-path .gitignore --ext .js ./src",
     "test": "npm run eslint"
   },
   "repository": {
@@ -28,5 +28,8 @@
     "eslint": "^6.6.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }
