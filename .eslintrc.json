@@ -1,7 +1,14 @@
 {  
 	"extends": "eslint:recommended",
+	"parserOptions": {
+	    "ecmaVersion": 6,
+        "sourceType": "module"
+    },
   	"env": {
-        "browser": true
+        "browser": true,
+		"es6": true,
+		"node": true,
+		"amd": true
     },
   	"rules": {
 		"no-redeclare": 1,
