@@ -1,0 +1,7 @@
+#simple-carousel>.slide {
+	display: none;
+}
+
+#simple-carousel>.slide.active {
+	display: block;
+}
