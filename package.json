@@ -12,7 +12,7 @@
     "build": "webpack --config ./webpack.config.js",
     "dev": "webpack --watch --progress --config ./webpack.config.js",
     "eslint": "eslint --ignore-path .gitignore --ext .js ./src",
-    "test": "npm run eslint"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2"
   }
 }
