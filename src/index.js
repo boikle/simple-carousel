@@ -1,3 +1,3 @@
-import {addCarousel} from './generator';
+import {startCarousel} from './carousel';
 
-addCarousel();
+startCarousel();
