@@ -1,3 +1,27 @@
+#simple-carousel {
+	width: 800px; /* default width */
+	height: 400px; /* default height */
+	border-radius: 2px;
+	box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.75);
+}
+
+#simple-carousel .slide {
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+#simple-carousel .slide .label {
+	max-width: 30%;
+	float: right;
+	padding: 10px;
+	margin: 10px;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 2px;
+}
+
 #simple-carousel>.slide {
 	display: none;
 }
