@@ -3,6 +3,7 @@ import {Slides} from './slides';
 class Carousel {
 	constructor() {
 		this.slideDeck = new Slides();
+		this.transitionTime = 5000;
 	}
 
 	rotateSlides() {
@@ -16,7 +17,7 @@ class Carousel {
 			_this.slideDeck.deactivateSlide(slide);
 			slide = slides[_this.slideDeck.getActiveSlide()];
 			_this.slideDeck.activateSlide(slide);
-		}, 2000);
+		}, this.transitionTime);
 	}
 }
 
