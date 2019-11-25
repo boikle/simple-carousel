@@ -1,4 +1,5 @@
-import {Slides} from './slides';
+// import {Slides} from './slides';
+const Slides = require('./slides');
 
 class Carousel {
 	constructor() {
