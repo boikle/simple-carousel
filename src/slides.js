@@ -1,4 +1,4 @@
-export class Slides {
+class Slides {
 	constructor() {
 		this.activeSlideIndex = 0;
 	}
@@ -37,3 +37,4 @@ export class Slides {
 	}
 }
 
+module.exports = Slides;
