@@ -6,19 +6,19 @@ const Slides = require('./slides');
 class Carousel {
 	constructor() {
 		this.slideDeck = new Slides();
-		this.msInterval = 5000;
+		this.msInterval = 10000;
 	}
 
 	rotateSlides() {
 		let _this = this;
 		let slides = this.slideDeck.getSlides();
-		let slide = slides[this.slideDeck.getActiveSlide()];
+		let slide = slides[this.slideDeck.getActiveSlideIndex()];
 		this.slideDeck.activateSlide(slide);
 
 		window.setInterval(function() {
 			_this.slideDeck.incrementCurrentSlide();
 			_this.slideDeck.deactivateSlide(slide);
-			slide = slides[_this.slideDeck.getActiveSlide()];
+			slide = slides[_this.slideDeck.getActiveSlideIndex()];
 			_this.slideDeck.activateSlide(slide);
 		}, this.msInterval);
 	}
