@@ -1,30 +1,34 @@
+// Name: Slides
+// Description: The Slides class produces an object representing a collection
+// of slides. In each collection of slides, one slide is active, and that
+// can be updated when the slides are incremented.
 class Slides {
 	constructor() {
 		this.activeSlideIndex = 0;
 	}
 
-	getActiveSlide() {
+	getActiveSlideIndex() {
 		return this.activeSlideIndex;
 	}
 
-	setActiveSlide(index) {
+	setActiveSlideIndex(index) {
 		this.activeSlideIndex = index;
 	}
 
 	getSlides() {
 		const containerId = 'simple-carousel';
-		let carousel = document.getElementById(containerId);
-		let slides = carousel.getElementsByClassName('slide');
+		let container = document.getElementById(containerId);
+		let slides = container.getElementsByClassName('slide');
 		return slides;
 	}
 
 	incrementCurrentSlide() {
 		let startIndex = 0;
-		let slideIndex = this.getActiveSlide();
+		let slideIndex = this.getActiveSlideIndex();
 		if ((slideIndex + 1) < this.getSlides().length) {
-			this.setActiveSlide(slideIndex + 1);
+			this.setActiveSlideIndex(slideIndex + 1);
 		} else {
-			this.setActiveSlide(startIndex);
+			this.setActiveSlideIndex(startIndex);
 		}
 	}
 

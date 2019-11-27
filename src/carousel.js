@@ -1,10 +1,12 @@
-// import {Slides} from './slides';
+// Name: Carousel
+// Description: The Carousel class produces an object which creates a Slides
+// object, and increments the slides at a set interval of time.
 const Slides = require('./slides');
 
 class Carousel {
 	constructor() {
 		this.slideDeck = new Slides();
-		this.transitionTime = 5000;
+		this.msInterval = 5000;
 	}
 
 	rotateSlides() {
@@ -18,7 +20,7 @@ class Carousel {
 			_this.slideDeck.deactivateSlide(slide);
 			slide = slides[_this.slideDeck.getActiveSlide()];
 			_this.slideDeck.activateSlide(slide);
-		}, this.transitionTime);
+		}, this.msInterval);
 	}
 }
 
