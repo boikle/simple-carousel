@@ -24,9 +24,9 @@ class Slides {
 
 	incrementCurrentSlide() {
 		let startIndex = 0;
-		let slideIndex = this.getActiveSlideIndex();
-		if ((slideIndex + 1) < this.getSlides().length) {
-			this.setActiveSlideIndex(slideIndex + 1);
+		let currentIndex = this.getActiveSlideIndex();
+		if ((currentIndex + 1) < this.getSlides().length) {
+			this.setActiveSlideIndex(currentIndex + 1);
 		} else {
 			this.setActiveSlideIndex(startIndex);
 		}
