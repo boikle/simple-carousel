@@ -1,6 +1,10 @@
 # simple-carousel
 Simple Carousel Image Slider
 
+## simple-carousel Options:
+
+* slide-interval - specifies the slide rotation interval in milliseconds. e.g. `slide-interval="5000"`. Default is 10000ms.
+
 ## Instructions:
 
 1. Clone repo - git clone https://github.com/boikle/simple-carousel.git
@@ -18,7 +22,7 @@ Simple Carousel Image Slider
 		<title>Simple Carousel</title>
 	</head>
 	<body>
-		<div id="simple-carousel">
+		<div id="simple-carousel" slide-interval="8000">
 			<div class="slide" style="background-image:url(./slide1.jpg);">
 				<div class="label">Slide 1 - This is the first slide.</div>
 			</div>
