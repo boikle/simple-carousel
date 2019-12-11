@@ -1,19 +1,29 @@
 #simple-carousel {
+	position: relative;
 	width: 800px; /* default width */
 	height: 400px; /* default height */
 	border-radius: 2px;
 	box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.75);
 }
 
-#simple-carousel .slide {
+#simple-carousel>.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	object-fit: cover;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+#simple-carousel>.slide.active {
+	opacity: 1;
+	transition: opacity 0.5s ease;
 }
 
-#simple-carousel .slide .label {
+#simple-carousel>.slide .label {
 	max-width: 30%;
 	float: right;
 	padding: 10px;
@@ -22,10 +32,3 @@
 	border-radius: 2px;
 }
 
-#simple-carousel>.slide {
-	display: none;
-}
-
-#simple-carousel>.slide.active {
-	display: block;
-}
