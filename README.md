@@ -23,14 +23,16 @@ Simple Carousel Image Slider
 	</head>
 	<body>
 		<div id="simple-carousel" slide-interval="8000">
-			<div class="slide" style="background-image:url(./slide1.jpg);">
-				<div class="label">Slide 1 - This is the first slide.</div>
-			</div>
-			<div class="slide" style="background-image:url(./slide2.jpg);">
-				<div class="label">Slide 2 - This is the second slide.</div>
-			</div>
-			<div class="slide" style="background-image:url(./slide3.jpg);">
-				<div class="label">Slide 3 - This is the third slide.</div>
+			<div class="slide-deck">
+				<div class="slide" style="background-image:url(./slide1.jpg);">
+					<div class="label">Slide 1 - This is the first slide.</div>
+				</div>
+				<div class="slide" style="background-image:url(./slide2.jpg);">
+					<div class="label">Slide 2 - This is the second slide.</div>
+				</div>
+				<div class="slide" style="background-image:url(./slide3.jpg);">
+					<div class="label">Slide 3 - This is the third slide.</div>
+				</div>
 			</div>
 		</div>
 		<script src="./simple-carousel.js"></script>
