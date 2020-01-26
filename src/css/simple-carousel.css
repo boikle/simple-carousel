@@ -1,6 +1,9 @@
+#simple-carousel {
+	width: 800px; /* default width */
+}
+
 #simple-carousel .slide-deck {
 	position: relative;
-	width: 800px; /* default width */
 	height: 400px; /* default height */
 	border-radius: 2px;
 	box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.75);
@@ -31,7 +34,6 @@
 }
 #simple-carousel .slide-index {
 	height: 30px;
-	width: 800px;
 	padding-top: 5px;
 	text-align: center;
 }
