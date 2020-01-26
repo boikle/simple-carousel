@@ -1,12 +1,11 @@
-#simple-carousel {
+#simple-carousel .slide-deck {
 	position: relative;
 	width: 800px; /* default width */
 	height: 400px; /* default height */
 	border-radius: 2px;
 	box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.75);
 }
-
-#simple-carousel>.slide {
+#simple-carousel .slide-deck>.slide {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -18,12 +17,11 @@
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }
-#simple-carousel>.slide.active {
+#simple-carousel .slide-deck>.slide.active {
 	opacity: 1;
 	transition: opacity 0.5s ease;
 }
-
-#simple-carousel>.slide .label {
+#simple-carousel .slide-deck>.slide .label {
 	max-width: 30%;
 	float: right;
 	padding: 10px;
@@ -31,4 +29,27 @@
 	background-color: rgba(255,255,255,0.8);
 	border-radius: 2px;
 }
-
+#simple-carousel .slide-index {
+	height: 30px;
+	width: 800px;
+	padding-top: 5px;
+	text-align: center;
+}
+#simple-carousel .slide-index>.index-item {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 2px;
+	background-color: #eeeeee;
+	transition: all 0.25s ease;
+	margin: 5px;
+	width: 25px;
+	height: 10px;
+}
+#simple-carousel .slide-index>.index-item:hover,
+#simple-carousel .slide-index>.index-item.active {
+	background-color: #999999;
+	transition: all 0.25s ease;
+	box-shadow: 1px 2px 3px 0px rgba(190,190,190,0.75);
+	width: 35px;
+	height: 14px;
+}
