@@ -1,5 +1,33 @@
 const Slides = require('../src/slides');
 const assert = require('assert');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const dom = new JSDOM(
+	`<!doctype html>
+	<html>
+		<head>
+			<title>Simple Carousel</title>
+		</head>
+		<body>
+			<div id="simple-carousel" slide-interval="8000">
+				<div class="slide-deck">
+					<div class="slide" style="background-image:url(./slide1.jpg);">
+						<div class="label">Slide 1 - This is the first slide.</div>
+					</div>
+					<div class="slide" style="background-image:url(./slide2.jpg);">
+						<div class="label">Slide 2 - This is the second slide.</div>
+					</div>
+					<div class="slide" style="background-image:url(./slide3.jpg);">
+						<div class="label">Slide 3 - This is the third slide.</div>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>	`
+);
+
+global.document = dom.window.document;
+
 describe('Slides', function() {
 	let slides = new Slides();
 	describe('getActiveSlide()', function() {
