@@ -11,45 +11,51 @@ class SlideIndex {
 	getDeckSize() {
 		const containerId = 'simple-carousel';
 		let container = document.getElementById(containerId);
-		let slideIndex = container.getElementsByClassName('slide');
+		if (container) {
+			let slideIndex = container.getElementsByClassName('slide');
 
-		return slideIndex.length;
+			return slideIndex.length;
+		}
 	}
 
 	createSlideIndex() {
 		let i, indexItem;
 		let el = document.getElementById('simple-carousel');
-		let slideIndex = document.createElement('div');
-		slideIndex.classList.add('slide-index');
+		if (el) {
+			let slideIndex = document.createElement('div');
+			slideIndex.classList.add('slide-index');
 
-		for (i = 0; i < this.deckSize; i += 1) {
-			indexItem = document.createElement('div');
-			indexItem.classList.add('index-item');
-			indexItem.setAttribute('index', i);
-			indexItem.addEventListener('click', function() {
-				let btnIndex = this.getAttribute('index');
-				let event = new CustomEvent('updateActiveSlide', {
-					detail: {
-						'slideIndex': btnIndex
-					}
+			for (i = 0; i < this.deckSize; i += 1) {
+				indexItem = document.createElement('div');
+				indexItem.classList.add('index-item');
+				indexItem.setAttribute('index', i);
+				indexItem.addEventListener('click', function() {
+					let btnIndex = this.getAttribute('index');
+					let event = new CustomEvent('updateActiveSlide', {
+						detail: {
+							'slideIndex': btnIndex
+						}
+					});
+					document.dispatchEvent(event);
 				});
-				document.dispatchEvent(event);
-			});
-			slideIndex.appendChild(indexItem);
+				slideIndex.appendChild(indexItem);
 
-			if (i === 0) {
-				indexItem.classList.add('active');
+				if (i === 0) {
+					indexItem.classList.add('active');
+				}
 			}
-		}
 
-		el.appendChild(slideIndex);
+			el.appendChild(slideIndex);
+		}
 	}
 
 	getSlideIndexItems() {
 		const containerId = 'simple-carousel';
 		let container = document.getElementById(containerId);
-		let slideIndex = container.getElementsByClassName('index-item');
-		return slideIndex;
+		if (container) {
+			let slideIndex = container.getElementsByClassName('index-item');
+			return slideIndex;
+		}
 	}
 
 	activateIndexItem(indexItem) {
