@@ -25,7 +25,7 @@
 	transition: opacity 0.5s ease;
 }
 #simple-carousel .slide-deck>.slide .label {
-	max-width: 30%;
+	max-width: 40%;
 	float: right;
 	padding: 10px;
 	margin: 10px;
