@@ -24,17 +24,19 @@ class Carousel {
 		let interval;
 		let minInterval = 1000;
 		let el = document.getElementById('simple-carousel');
-		let defaultInterval = 10000;
-		let definedInterval = parseInt(el.getAttribute('slide-interval'));
+		if (el) {
+			let defaultInterval = 10000;
+			let definedInterval = parseInt(el.getAttribute('slide-interval'));
 
-		if (!isNaN(definedInterval)
-			&& definedInterval >= minInterval) {
-			interval = parseInt(definedInterval);
-		} else {
-			interval = defaultInterval;
+			if (!isNaN(definedInterval)
+				&& definedInterval >= minInterval) {
+				interval = parseInt(definedInterval);
+			} else {
+				interval = defaultInterval;
+			}
+
+			return interval;
 		}
-
-		return interval;
 	}
 
 	rotateSlides() {

@@ -10,10 +10,12 @@ class Slides {
 		this.slides = this.getSlides();
 
 		// Initialize first slide as active.
-		this.slides[this.activeSlideIndex].classList.add('active');
+		if (this.slides) {
+			this.slides[this.activeSlideIndex].classList.add('active');
 
-		this.slideIndex = new SlideIndex();
-		this.indexItems = this.slideIndex.getSlideIndexItems();
+			this.slideIndex = new SlideIndex();
+			this.indexItems = this.slideIndex.getSlideIndexItems();
+		}
 	}
 
 	getActiveSlideIndex() {
@@ -37,32 +39,39 @@ class Slides {
 	getSlides() {
 		const containerId = 'simple-carousel';
 		let container = document.getElementById(containerId);
-		let slides = container.getElementsByClassName('slide');
-		return slides;
+		if (container) {
+			let slides = container.getElementsByClassName('slide');
+			return slides;
+		}
 	}
 
 	incrementCurrentSlide() {
 		let slideIndex = 0;
 		let currentIndex = this.getActiveSlideIndex();
-		if ((Number(currentIndex) + 1) < this.getSlides().length) {
-			slideIndex = Number(currentIndex) + 1;
-		}
-
-		let updateSlideEvent = new CustomEvent('updateActiveSlide', {
-			detail: {
-				'slideIndex': slideIndex
+		let slides = this.getSlides();
+		if (slides) {
+			if ((Number(currentIndex) + 1) < slides.length) {
+				slideIndex = Number(currentIndex) + 1;
 			}
-		});
-		document.dispatchEvent(updateSlideEvent);
+
+			let updateSlideEvent = new CustomEvent('updateActiveSlide', {
+				detail: {
+					'slideIndex': slideIndex
+				}
+			});
+			document.dispatchEvent(updateSlideEvent);
+		}
 	}
 
 	deactivateActiveElements() {
 		const containerId = 'simple-carousel';
 		let container = document.getElementById(containerId);
-		let activeElems = container.getElementsByClassName('active');
+		if (container) {
+			let activeElems = container.getElementsByClassName('active');
 
-		while (activeElems.length) {
-			activeElems[0].classList.remove('active');
+			while (activeElems.length) {
+				activeElems[0].classList.remove('active');
+			}
 		}
 	}
 
