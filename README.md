@@ -7,9 +7,9 @@ Simple Carousel Image Slider
 
 ## Instructions:
 
-1. Clone repo - git clone https://github.com/boikle/simple-carousel.git
-2. Install dependencies - npm install
-3. Build the library - npm run build
+1. Clone repo - `git clone https://github.com/boikle/simple-carousel.git`
+2. Install dependencies - `npm install`
+3. Build the library - `npm run build`
 4. Copy the simple-carousel.js file (generated in the dist directory) to your project.
 5. Add the structure of the carousel to your webpage.
 
