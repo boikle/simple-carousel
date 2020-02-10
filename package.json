@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple image carousel slider",
   "private": true,
+  "main": "./dist/simple-carousel.js",
   "directories": {
     "test": "./test",
     "src": "./src",
