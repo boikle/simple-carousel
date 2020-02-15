@@ -1,7 +1,7 @@
 # simple-carousel
 Simple Carousel Image Slider
 
-[[https://github.com/boikle/simple-carousel/blob/master/screenshot/simple-carousel-screenshot.gif]]
+<img src="https://github.com/boikle/simple-carousel/blob/master/screenshot/simple-carousel-screenshot.gif">
 
 ## simple-carousel Options:
 
