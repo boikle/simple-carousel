@@ -5,6 +5,8 @@ Simple Carousel Image Slider
 
 * slide-interval - specifies the slide rotation interval in milliseconds. e.g. `slide-interval="5000"`. Default is 10000ms.
 
+[[https://github.com/boikle/simple-carousel/blob/master/screenshot/simple-carousel-screenshot.gif]]
+
 ## Instructions:
 
 1. Clone repo - `git clone https://github.com/boikle/simple-carousel.git`
