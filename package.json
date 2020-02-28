@@ -10,7 +10,7 @@
     "dist": "./dist"
   },
   "scripts": {
-    "build": "webpack --config ./webpack.config.js",
+    "build": "webpack --config ./webpack.config.js; webpack --config ./webpack.production.config.js",
     "dev": "webpack --watch --progress --config ./webpack.config.js",
     "eslint": "eslint --ignore-path .gitignore --ext .js ./src",
     "test": "mocha"
@@ -26,14 +26,14 @@
   },
   "homepage": "https://github.com/boikle/simple-carousel#readme",
   "devDependencies": {
-    "css-loader": "^3.3.0",
-    "eslint": "^6.7.2",
-    "style-loader": "^1.0.1",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "jsdom": "^16.0.1",
+    "jsdom": "^16.2.0",
     "lodash": "^4.17.15",
     "mocha": "^6.2.2",
     "serialize-javascript": "^2.1.2"
