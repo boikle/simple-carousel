@@ -1,3 +1,5 @@
+let BannerPlugin = require('webpack/lib/BannerPlugin');
+let fs = require('fs');
 const path = require('path');
 
 module.exports = {
@@ -14,6 +16,9 @@ module.exports = {
 				use: ['style-loader', 'css-loader'],
 			}
 		]
-	}
+	},
+	"plugins": [
+		new BannerPlugin(fs.readFileSync('./LICENSE', 'utf8'))
+	]
 
 };
