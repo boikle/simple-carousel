@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boikle/simple-carousel.git"
+    "url": "git+https://github.com/roikle/simple-carousel.git"
   },
   "author": "Robert Oikle",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/boikle/simple-carousel/issues"
+    "url": "https://github.com/roikle/simple-carousel/issues"
   },
-  "homepage": "https://github.com/boikle/simple-carousel#readme",
+  "homepage": "https://github.com/roikle/simple-carousel#readme",
   "devDependencies": {
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
