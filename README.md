@@ -1,7 +1,7 @@
 # simple-carousel
 A light-weight (9.8kb) carousel image slider.
 
-<img src="https://github.com/boikle/simple-carousel/blob/master/screenshot/simple-carousel-screenshot.gif">
+<img src="https://github.com/roikle/simple-carousel/blob/master/screenshot/simple-carousel-screenshot.gif">
 
 ## simple-carousel Options:
 
